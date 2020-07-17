@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="vladbaransky@gmail.com">
+        <createTable tableName="city">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(50)"/>
+            <column name="info" type="varchar(1000)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="vladbaransky@gmail.com">
+        <insert tableName="city">
+            <column name="name" value="Minsk"/>
+            <column name="info" value="Костёл святого Симеона и святой Елены,
+часто называемый также Красным костёлом — наиболее известный католический храм Минска.
+Памятник архитектуры, включён в Государственный список историко-культурных ценностей Республики Беларусь.
+Национальный академический театр имени Янки Купалы театр Беларуси. Здание театра было построено в 1890 году по проекту архитекторов
+Константина Введенского и Короля Козловского. Главный фасад театра выходит на площадь, образованную пересечением улицы Карла Маркса
+(Подгорная) и улицы Энгельса (Петропавловская)."/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="3" author="vladbaransky@gmail.com">
+        <insert tableName="city">
+            <column name="name" value="Moscow"/>
+            <column name="info" value="Красная площадь — главная площадь Москвы, расположена между Московским Кремлём и Китай-городом.
+Выходит к берегу Москвы-реки через пологий Васильевский спуск."/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="4" author="vladbaransky@gmail.com">
+        <insert tableName="city">
+            <column name="name" value="London"/>
+            <column name="info" value="Биг-Бен — популярное туристическое название часовой башни Вестминстерского дворца.
+Официальное название башни с 2012 года — Башня Елизаветы."/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
