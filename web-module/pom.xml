@@ -15,7 +15,7 @@
     <properties>
         <java.version>1.8</java.version>
         <service-module.version>0.0.1-SNAPSHOT</service-module.version>
-        <h2.version>1.3.175</h2.version>
+        <h2.version>2.1.210</h2.version>
     </properties>
 
     <dependencies>
